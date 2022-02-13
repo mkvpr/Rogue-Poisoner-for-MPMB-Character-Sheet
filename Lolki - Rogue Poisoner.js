@@ -56,7 +56,7 @@ AddSubClass(
 				name : "Brew Poison",
 				source : ["L:RP", 0],
 				minlevel : 3,
-				description : "\n   " + "You learn to create deadly substances to cause harm to your foes.",
+				description : "\n   " + "You learn to create deadly substances to cause harm to your foes." + "Your poison save DC is equal to 8 + your proficiency bonus + your Dexterity modifier.",
 				            additional : ["", "", "2 Recipies", "2 Recipies", "2 Recipies", "2 Recipies", "3 Recipies", "3 Recipies", "3 Recipies", "4 Recipies", "4 Recipies", "4 Recipies", "5 Recipies", "5 Recipies", "5 Recipies", "6 Recipies", "6 Recipies", "6 Recipies", "7 Recipies", "7 Recipies"],
                             extraname : "Specialty Poisons",
                             extrachoices : ["Hemorrhagic Poison", "Necrotic Poison", "Paralyzing Poison", "Rusting Poison", "Blinding Poison", "Intoxicating Poison", "Aggression Poison"],
