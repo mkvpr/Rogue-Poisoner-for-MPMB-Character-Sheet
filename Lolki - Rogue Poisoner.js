@@ -25,6 +25,15 @@ SourceList["L:RP"] = {
 	date : "2022/02/12"
 },
 
+ToolsList["Poisoner's Kit"] = {
+	infoname : "Poisoner's Kit",
+	name : " Poisoner's Kit",
+	weight : "1",
+	type : "alchemist's supplies",
+	source : ["L:RP", 0]
+},
+
+
 AddSubClass(
 
 	"rogue",
@@ -47,7 +56,7 @@ AddSubClass(
 				name : "Brew Poison",
 				source : ["L:RP", 0],
 				minlevel : 3,
-				description : "\n   " + "At 3rd level, you learn to create deadly substances to cause harm to your foes. Pick two poison recipes of your choice from the menu.",
+				description : "\n   " + "You learn to create deadly substances to cause harm to your foes.",
 				            additional : ["", "", "2 Recipies", "2 Recipies", "2 Recipies", "2 Recipies", "3 Recipies", "3 Recipies", "3 Recipies", "4 Recipies", "4 Recipies", "4 Recipies", "5 Recipies", "5 Recipies", "5 Recipies", "6 Recipies", "6 Recipies", "6 Recipies", "7 Recipies", "7 Recipies"],
                             extraname : "Specialty Poisons",
                             extrachoices : ["Hemorrhagic Poison", "Necrotic Poison", "Paralyzing Poison", "Rusting Poison", "Blinding Poison", "Intoxicating Poison", "Aggression Poison"],
@@ -100,8 +109,7 @@ AddSubClass(
 				source : ["L:RP", 0],
 				minlevel : 3,
 				description : "\n   " + "I gain proficiency and expertise with the Poisoner's kit",
-				skillstxt : "\n\n" + toUni("Rogue (Poisoner)"),
-				skills : ["Poisoner's kit"],
+				toolProfs : ["Poisoner's Kit", "Dex"]
 			},
 
 
@@ -122,14 +130,22 @@ AddSubClass(
 				source : ["L:RP", 0],
 				minlevel : 13,
 				description : "\n   " + "You have found a way to infuse the poison you work with into your own body and bloodstream causing those who dare spill your blood harm." + "\n   " + "Whenever you take damage from a melee attack the attacker is dealt acid damage equal to your constitution modifier (minimum 1).",
+				dmgres : ["Poison"],
 			},
 
 
-            "subclassfeature17" : {
-				name : "Poison Mastery",
+			"subclassfeature17" : {
+				name : "Poison Master",
 				source : ["L:RP", 0],
 				minlevel : 17,
-				description : "\n   " + "your knowledge of poison making and your bodily experimentations have bared fruit, you have achieved the body of the Master Poisoner.",
+				description : desc([
+					"I have advantage on saves vs. poison and immune to poison damage.",	
+				]),
+
+				savetxt : {
+					immune : ["poison"],
+					adv_vs : ["poison"],
+				},
 			},
 		}
 	}
