@@ -129,8 +129,12 @@ AddSubClass(
 				name : "Poisoned Body",
 				source : ["L:RP", 0],
 				minlevel : 13,
-				description : "\n   " + "You have found a way to infuse the poison you work with into your own body and bloodstream causing those who dare spill your blood harm." + "\n   " + "Whenever you take damage from a melee attack the attacker is dealt acid damage equal to your constitution modifier (minimum 1).",
+				description : "\n   " + "You have infused the poison you work with into bloodstream causing those who dare spill your blood harm." + " Whenever you take damage from a melee attack the attacker is dealt acid damage equal to your constitution modifier (minimum 1)." + " You have adv. on saves and resistant to poison.",
 				dmgres : ["Poison"],
+				savetxt : {
+					adv_vs : ["poison"],
+					},
+				},
 			},
 
 
@@ -139,13 +143,10 @@ AddSubClass(
 				source : ["L:RP", 0],
 				minlevel : 17,
 				description : desc([
-					"I have advantage on saves vs. poison and immune to poison damage.",	
+					"I am immune to poison damage.",	
 				]),
-
 				savetxt : {
-					immune : ["poison"],
-					adv_vs : ["poison"],
-				},
+					immune : ["poison"],				
 			},
 		}
 	}
